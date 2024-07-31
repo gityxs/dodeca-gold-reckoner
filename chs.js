@@ -263,7 +263,7 @@ var cnPrefix = {
     "Shift-Click to Toggle Tooltips: ": "Shift-单击以切换工具提示：",
     "Notation: ": "符号: ",
     "Toggle Music: ": "切换声音: ",
-    "Dodeca: The Gold Reckoner v": "十二黄金计算器 版本",
+    // "Dodeca: The Gold Reckoner v": "十二黄金计算器 版本",
     "Producer ": "生产者 ",
     "Layer ": "层级 ",
     "": "",

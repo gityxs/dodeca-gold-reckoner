@@ -2,7 +2,8 @@ const greekLetters = ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ"
 const backgroundColors = ["#440", "#240", "#040", "#042", "#044", "#024", "#004", "#204", "#404", "#402", "#400", "#420"]
 const layerUnlockCosts = ["1e25", "1e100", "1e250", "1e400", "1e550", "1e750", "1e1000", "1e1200", "1e1400", "1e1650", "1e1900"]
 
-window.isDevVersion = window.location.href.indexOf('demonin.com') === -1
+// window.isDevVersion = window.location.href.indexOf('g8hh') === -1 || window.location.href.indexOf('github.io') === -1
+window.isDevVersion = false
 
 function toFixedFloor(num, decimalPlaces) {
 	if (num.toFixed(decimalPlaces) == "10.00") return "9.99"
