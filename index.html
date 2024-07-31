@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Dodeca: The Gold Reckoner" property="og:title" />
+    <meta content="#888" data-react-helmet="true" name="theme-color" />
+    <title>Dodeca: The Gold Reckoner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+    <div id="game">
+        <div id="layersTab">
+            <canvas id="layersCanvas" width="1000" height="1000"></canvas>
+            <div class="layerButton" style="background-color: #660" onclick="selectTab(1)"><img class="lockIcon" src="lock.png">α</div>
+            <div class="layerButton" style="background-color: #360" onclick="selectTab(2)"><img class="lockIcon" src="lock.png">β</div>
+            <div class="layerButton" style="background-color: #060" onclick="selectTab(3)"><img class="lockIcon" src="lock.png">γ</div>
+            <div class="layerButton" style="background-color: #063" onclick="selectTab(4)"><img class="lockIcon" src="lock.png">δ</div>
+            <div class="layerButton" style="background-color: #066" onclick="selectTab(5)"><img class="lockIcon" src="lock.png">ε</div>
+            <div class="layerButton" style="background-color: #036" onclick="selectTab(6)"><img class="lockIcon" src="lock.png">ζ</div>
+            <div class="layerButton" style="background-color: #006" onclick="selectTab(7)"><img class="lockIcon" src="lock.png">η</div>
+            <div class="layerButton" style="background-color: #306" onclick="selectTab(8)"><img class="lockIcon" src="lock.png">θ</div>
+            <div class="layerButton" style="background-color: #606" onclick="selectTab(9)"><img class="lockIcon" src="lock.png">ι</div>
+            <div class="layerButton" style="background-color: #603" onclick="selectTab(10)"><img class="lockIcon" src="lock.png">κ</div>
+            <div class="layerButton" style="background-color: #600" onclick="selectTab(11)"><img class="lockIcon" src="lock.png">λ</div>
+            <div class="layerButton" style="background-color: #630" onclick="selectTab(12)"><img class="lockIcon" src="lock.png">μ</div> 
+            <div id="layerInfo">
+                <p id="layerInfoText"></p>
+                <button id="layerBuyButton" onclick="buyLayer(selectedLayer)">Buy</button>
+            </div>
+        </div>
+        <div id="goldTab">
+            <button id="layersTabUnlockButton" onclick="unlockLayersTab()">Unlock layers tab<br>Costs 1.00e10 gold</button>
+            <img id="layersTabButton" src="triangle.png" onclick="exitLayer()"></img>
+            <div id="grid"></div>
+            <div id="doublerInfo">
+                <p id="doublerInfoHeader">You have 0 doublers</p>
+                <p id="doublerInfoText">Multiplying gold gain by 1 - costs 100 gold</p>
+                <button id="doublerBuyButton" onclick="buyDoubler()">Buy</button>
+            </div>
+            <div id="cellInfo">
+                <p id="cellInfoHeader"></p>
+                <p id="cellInfoText"></p>
+                <button id="cellBuyButton" onclick="buyProducer(selectedProducer)">Buy</button>
+            </div>
+            <div id="maxInfo">
+                <p id="maxInfoText">Buy α-144 to unlock buy max for producers</p>
+                <button id="buyMaxButton" onclick="buyMaxProducers()">Buy max producers</button>
+            </div>
+        </div>
+        <p id="gold"></p>
+    </div>
+    <p id="versionText">Dodeca: The Gold Reckoner v0.1.1</p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="break_eternity.js"></script>
+    <script src="script.js?v0111=1"></script>
+    <script>load(); if (!isDevVersion) setAutoSave()</script>
+</body>
+</html>

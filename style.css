@@ -1,0 +1,293 @@
+@font-face{
+	font-family:"Pixelated MS Sans Serif";
+	font-style:normal;
+	src:url(fonts/ms_sans_serif_mono.woff) format("woff");
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    image-rendering: pixelated;
+    user-select: none;
+    color: white;
+}
+
+button {
+    color: white;
+}
+
+#game {
+    position: absolute;
+    width: 100vmin;
+    height: 100vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+#layersTab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+}
+
+#layersCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layerButton {
+    position: absolute;
+    width: 8%;
+    height: 8%;
+    transform: translate(-50%, -50%);
+    background-image: url("back.png");
+    border: 0.2vmin solid white;
+    cursor: pointer;
+    text-align: center;
+    font-size: 4vmin;
+    line-height: 7.5vmin;
+}
+
+#goldTab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #440;
+    background-image: url("back.png");
+    background-size: 15%;
+    overflow: hidden;
+}
+
+#layersTabUnlockButton {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 16%;
+    height: 5%;
+    background-color: rgba(0,0,0,0.5);
+    border: 0.2vmin solid white;
+    cursor: pointer;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 1.7vmin;
+}
+
+#layersTabButton {
+    width: 6%;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    display: none;
+    cursor: pointer;
+}
+
+.lockIcon {
+    width: 50%;
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#layerInfo {
+    background-color: #111;
+    position: absolute;
+    width: 40%;
+    height: 12%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.2vmin solid white;
+    text-align: center;
+}
+
+#layerInfoText {
+    margin: 1vmin;
+    font-size: 2vmin;
+}
+
+#layerBuyButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30%;
+    margin-top: 2%;
+    background-color: rgba(0,0,0,0.5);
+    border: 0.2vmin solid white;
+    cursor: pointer;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 2vmin;
+}
+
+#gold {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+    color: white;
+    font-size: 5vmin;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cell {
+    position: relative;
+    box-sizing: border-box;
+    border: 0.2vmin solid white;
+    overflow: hidden;
+    padding: 0;
+    cursor: pointer;
+}
+
+.cellText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vmin;
+    margin: 0;
+}
+
+#doublerInfo {
+    position: absolute;
+    width: 25%;
+    height: 12%;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border: 0.2vmin solid white;
+    text-align: center;
+}
+
+#cellInfo {
+    position: absolute;
+    width: 30%;
+    height: 12%;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.2vmin solid white;
+    text-align: center;
+}
+
+#cellInfoHeader {
+    margin: 0.2vmin;
+    margin-top: 0.4vmin;
+    font-size: 3vmin;
+    font-weight: bold;
+}
+
+#cellInfoText {
+    margin: 0.2vmin;
+    font-size: 2vmin;
+}
+
+#cellBuyButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 30%;
+    margin-top: 4%;
+    background-color: rgba(0,0,0,0.5);
+    border: 0.2vmin solid white;
+    display: none;
+    cursor: pointer;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 1.7vmin;
+}
+
+#doublerInfoHeader {
+    margin: 0.8vmin;
+    font-size: 2vmin;
+    font-weight: bold;
+}
+
+#doublerInfoText {
+    margin: 0.2vmin;
+    margin-left: 1vmin;
+    margin-right: 1vmin;
+    font-size: 1.6vmin;
+}
+
+#doublerBuyButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 30%;
+    margin-top: 2%;
+    background-color: rgba(0,0,0,0.5);
+    border: 0.2vmin solid white;
+    cursor: pointer;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 1.7vmin;
+}
+
+#maxInfo {
+    position: absolute;
+    width: 25%;
+    height: 12%;
+    top: 90%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    border: 0.2vmin solid white;
+    text-align: center;
+}
+
+#maxInfoText {
+    margin: 1vmin;
+    font-size: 2vmin;
+}
+
+#buyMaxButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 30%;
+    margin-top: 16%;
+    background-color: rgba(0,0,0,0.5);
+    border: 0.2vmin solid white;
+    cursor: pointer;
+    font-family: "Pixelated MS Sans Serif", Arial;
+    font-size: 2vmin;
+    display: none;
+}
+
+#versionText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.2vmin;
+    font-size: 1.5vmin;
+    text-align: right;
+    color: #bbb;
+}
